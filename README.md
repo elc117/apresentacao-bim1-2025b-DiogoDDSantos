@@ -43,3 +43,52 @@ A aplicação parcial de funções é uma técnica poderosa para
 funções, onde a saída de uma se torna a entrada da próxima. Isso cria um "pipeline" de dados, tornando o fluxo de informações mais claro.
 
 ## Exemplos de codigo 
+
+### Exemplo 1 
+~~~haskell
+subtrair :: Int -> Int -> Int
+subtrair x y = x - y
+
+subtrairDinheiroDaConta :: Int -> Int
+subtrairDinheiroDaConta = subtrair 1000
+~~~
+
+### Exemplo 2
+~~~haskell
+numeros :: [Int]
+numeros = [1,3,7,8,9]
+
+adicionar :: Int -> Int -> Int
+adicionar x y = x + y
+
+adicionarDez :: Int -> Int
+adicionarDez = adicionar 10
+
+numerosAumentados = map adicionarDez numeros
+~~~
+
+### Exemplo 3
+~~~haskell
+criarEmail :: String -> String -> String -> String
+criarEmail remetente assunto mensagem =
+  "De: " ++ remetente ++ "\n" ++
+  "Assunto: " ++ assunto ++ "\n" ++
+  "Mensagem: " ++ mensagem ++ "\n"
+
+emailDeSuporte :: String -> String -> String
+emailDeSuporte = criarEmail "suporte@empresa.com"
+
+emailDeProblemaDeLogin :: String -> String
+emailDeProblemaDeLogin = emailDeSuporte "Problema com o Login"
+
+email1 = emailDeSuporte "Novo Cadastro" "Bem-vindo à nossa plataforma!"
+email2 = emailDeProblemaDeLogin "Não consigo acessar minha conta. Por favor, ajudem!"
+~~~
+
+
+## Referências
+
+<https://haskell.tailorfontela.com.br/higher-order-functions>
+<https://en.wikipedia.org/wiki/Currying>
+<https://youtu.be/m12c99qgHBU>
+
