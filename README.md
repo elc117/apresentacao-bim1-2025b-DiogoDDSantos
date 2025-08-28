@@ -16,11 +16,11 @@ Em linguagens como Haskell, a aplicação parcial é o comportamento padrão. Um
 
 ### Aplicação em Haskell 
 ~~~haskell
-soma :: Int -> Int -> Int
-soma x y = x + y
+multiplicar :: Int -> Int -> Int
+multiplicar x y = x * y
 
-somaDois :: Int -> Int
-somaDois = soma 5
+triplica :: Int -> Int
+triplica = multiplicar 5
 ~~~
 
 ### Aplicação em Python
