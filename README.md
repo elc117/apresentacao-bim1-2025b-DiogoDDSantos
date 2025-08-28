@@ -20,7 +20,7 @@ multiplicar :: Int -> Int -> Int
 multiplicar x y = x * y
 
 triplica :: Int -> Int
-triplica = multiplicar 5
+triplica = multiplicar 3
 ~~~
 
 ### Aplicação em Python
